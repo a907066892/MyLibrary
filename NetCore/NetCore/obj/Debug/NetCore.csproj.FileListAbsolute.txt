@@ -1,0 +1,6 @@
+D:\MyLibrary\NetCore\NetCore\bin\Debug\NetCore.exe.config
+D:\MyLibrary\NetCore\NetCore\bin\Debug\NetCore.exe
+D:\MyLibrary\NetCore\NetCore\bin\Debug\NetCore.pdb
+D:\MyLibrary\NetCore\NetCore\obj\Debug\NetCore.csprojAssemblyReference.cache
+D:\MyLibrary\NetCore\NetCore\obj\Debug\NetCore.exe
+D:\MyLibrary\NetCore\NetCore\obj\Debug\NetCore.pdb
