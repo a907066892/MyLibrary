@@ -6,25 +6,13 @@ using System.Threading.Tasks;
 
 namespace NetCore
 {
+
     public interface IFeatureCollection : IDictionary<Type, object>
     {
     }
+    /// <summary>
+    /// 用于存储http对象,项目中为适配httpcontext
+    /// </summary>
     public class FeaturnCollection : Dictionary<Type, object>, IFeatureCollection { }
-    public static partial class Extensions
-    {
-        public static Task WriteAsync(this HttpResponse response, string contents)
-        {
-            var buffer = Encoding.UTF8.GetBytes(contents);
-            return response.Body.WriteAsync(buffer, 0, buffer.Length);
-        }
-
-        public static IWebHostBuilder UserHttpListener(this IWebHostBuilder builder, params string[] urls) => builder.UserServer(new HttpListenerServer(urls));
-
-        public static T Get<T>(this IFeatureCollection ferturns) => ferturns.TryGetValue(typeof(T), out var value) ? (T)value : default(T);
-        public static IFeatureCollection Set<T>(this IFeatureCollection ferturns, T ferturn)
-        {
-            ferturns[typeof(T)] = ferturn;
-            return ferturns;
-        }
-    }
+   
 }
