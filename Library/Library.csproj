@@ -50,19 +50,5 @@
     <Compile Include="TbSysMenu.cs" />
     <Compile Include="TbSysSubSystemDefine.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\Sigbit\Project\FrameWork4.0\SigbitCommonSolutions\Sigbit.Common\Sigbit.Common.csproj">
-      <Project>{5b852150-d9c3-4ab3-bdc0-dad16b819059}</Project>
-      <Name>Sigbit.Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Sigbit\Project\FrameWork4.0\SigbitCommonSolutions\Sigbit.Data\Sigbit.Data.csproj">
-      <Project>{8f07a089-a32d-4b31-b62e-4baf9017af34}</Project>
-      <Name>Sigbit.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Sigbit\Project\FrameWork4.0\SigbitCommonSolutions\Sigbit.Net\Sigbit.Net.csproj">
-      <Project>{E88A6389-F6DF-4CC7-B31B-6C3183AAFE51}</Project>
-      <Name>Sigbit.Net</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

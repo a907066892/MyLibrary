@@ -20,3 +20,6 @@ D:\MyLibrary\MyLibrary\Library\bin\Debug\Sigbit.Common.xml
 D:\MyLibrary\MyLibrary\Library\bin\Debug\Sigbit.Data.pdb
 D:\MyLibrary\MyLibrary\Library\bin\Debug\Sigbit.Net.pdb
 D:\MyLibrary\MyLibrary\Library\obj\Debug\Library.csproj.CopyComplete
+D:\MyLibrary\Library\obj\Debug\Library.csprojAssemblyReference.cache
+D:\MyLibrary\Library\obj\Debug\Library.dll
+D:\MyLibrary\Library\obj\Debug\Library.pdb
