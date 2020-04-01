@@ -47,24 +47,36 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationBuilder.cs" />
+    <Compile Include="Extensions.cs" />
     <Compile Include="FeaturnCollection.cs" />
-    <Compile Include="HttpContext.cs" />
-    <Compile Include="HttpListenerFeature.cs" />
-    <Compile Include="HttpListenerServer.cs" />
+    <Compile Include="Http\Host\IWebHost.cs" />
+    <Compile Include="Http\Host\IWebHostBuilder.cs" />
+    <Compile Include="Http\Host\WebHost.cs" />
+    <Compile Include="Http\Host\WebHostBuilder.cs" />
+    <Compile Include="Http\HttpContext\HttpContext.cs" />
+    <Compile Include="Http\HttpContext\HttpListenerFeature.cs" />
+    <Compile Include="Http\HttpContext\IHttpRequest.cs" />
+    <Compile Include="Http\HttpContext\IHttpResponse.cs" />
+    <Compile Include="Http\Server\HttpListenerServer.cs" />
+    <Compile Include="Http\Server\Iserver.cs" />
     <Compile Include="IApplicationBuilder.cs" />
-    <Compile Include="IHttpRequest.cs" />
-    <Compile Include="IHttpResponse.cs" />
-    <Compile Include="IServer.cs" />
-    <Compile Include="IWebHost.cs" />
-    <Compile Include="IWebHostBuilder.cs" />
+    <Compile Include="MyEnumerble.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="NetCoreDelegate.cs" />
-    <Compile Include="WebHost.cs" />
-    <Compile Include="WebHostBuilder.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\NetCore.csprojAssemblyReference.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="obj\Debug\NetCore.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\NetCore.exe" />
+    <Content Include="obj\Debug\NetCore.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

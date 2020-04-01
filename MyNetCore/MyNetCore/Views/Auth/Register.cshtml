@@ -1,0 +1,98 @@
+﻿
+@{
+    ViewData["Title"] = "Register";
+    Layout = "~/Views/Shared/BaseView.cshtml";
+}
+
+<title>注册</title>
+
+<body>
+    <div id="app">
+        <el-card class="box-card" style="width:40%;margin:auto">
+            <div slot="header" style="text-align:center">
+                <h2> 注册</h2>
+            </div>
+            <el-form :model="form" :rules="rules" status-icon ref="form" label-width="80px">
+                <el-form-item prop="UserName" label="用户名">
+                    <el-input v-model="form.UserName"></el-input>
+                </el-form-item>
+                <el-form-item prop="PassWordHash" label="密码">
+                    <el-input v-model="form.PassWordHash"></el-input>
+                </el-form-item>
+                <el-form-item prop="RePassWordHash" label="重复密码">
+                    <el-input v-model="form.RePassWordHash"></el-input>
+                </el-form-item>
+                <el-form-item>
+                    <el-button @@click="onRegister" style="width:100%" type="primary"> 注册</el-button>
+                </el-form-item>
+                <el-form-item>
+                    <el-link @@click="onBack" type="primary">已有账户？返回</el-link>
+                </el-form-item>
+            </el-form>
+
+        </el-card>
+
+    </div>
+</body>
+<script>
+
+    var vue = new Vue({
+        el: "#app",
+        data: function () {
+            var checkName = (value, valid, callback) => {
+                if (!valid) {
+                        return callback("用户为空");
+                }
+                callback();
+            }
+            var ceckPassWord = (value, valid, callback) => {
+                if (!valid) {
+                        return callback("密码为空");
+                }
+                callback();
+            }
+
+            var ceckRePassWord = (value, valid, callback) => {
+                if (!valid) {
+                  return callback("重复密码为空");
+                } 
+              if (valid != this.$refs.form.model.PassWordHash)
+                  return callback("两次输入密码不一致");
+                callback();
+            }
+
+            return {
+                form: {
+                    UserName: "",
+                    PassWordHash: "",
+                    RePassWordHash: ""
+                },
+                rules: {
+                    UserName: [{ validator: checkName, triger: 'blur' }],
+                    PassWordHash: [{ validator: ceckPassWord, triger: 'blur' }],
+                    RePassWordHash: [{ validator: ceckRePassWord, triger: 'blur' }]
+                }
+            }
+        },
+        methods: {
+            onRegister: function () {
+                this.$refs['form'].validate((valid) => {
+                    if (valid) { 
+                        axios.post("Register", JSON.stringify(this.form), { headers: { "Content-Type": "application/json" } }).then((message) => {
+                            base.ShowSuccess(message.response.message)
+                        }).catch((error) => {
+                            base.ShowError(error.response.data)
+                        });
+
+                    }
+                })
+            },
+            onBack: function () {
+                window.history.go(-1);
+            }
+
+        }
+
+
+    })
+</script>

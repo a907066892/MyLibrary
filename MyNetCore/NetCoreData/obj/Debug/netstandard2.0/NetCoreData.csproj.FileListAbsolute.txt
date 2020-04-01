@@ -1,0 +1,8 @@
+D:\MyLibrary\MyNetCore\NetCoreData\bin\Debug\netstandard2.0\NetCoreData.deps.json
+D:\MyLibrary\MyNetCore\NetCoreData\bin\Debug\netstandard2.0\NetCoreData.dll
+D:\MyLibrary\MyNetCore\NetCoreData\obj\Debug\netstandard2.0\NetCoreData.csprojAssemblyReference.cache
+D:\MyLibrary\MyNetCore\NetCoreData\obj\Debug\netstandard2.0\NetCoreData.AssemblyInfoInputs.cache
+D:\MyLibrary\MyNetCore\NetCoreData\obj\Debug\netstandard2.0\NetCoreData.AssemblyInfo.cs
+D:\MyLibrary\MyNetCore\NetCoreData\bin\Debug\netstandard2.0\NetCoreData.pdb
+D:\MyLibrary\MyNetCore\NetCoreData\obj\Debug\netstandard2.0\NetCoreData.dll
+D:\MyLibrary\MyNetCore\NetCoreData\obj\Debug\netstandard2.0\NetCoreData.pdb

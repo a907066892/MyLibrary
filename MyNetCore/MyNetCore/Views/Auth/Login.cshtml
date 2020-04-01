@@ -1,0 +1,96 @@
+﻿@{
+    ViewData["Title"] = "User Login";
+    Layout = "~/Views/Shared/BaseView.cshtml";
+}
+@model  NetCoreData.Model.User
+
+<hr />
+<body>
+    <div id="app"  >
+        <el-card class="box-card" style=" width:40%;margin:auto">
+
+            <div slot="header" style="text-align:center">
+                <h2> 登录 </h2>
+            </div>
+            <el-form :model="form" status-icon :rules="rules" ref="form" label-width="80px"  >
+                <el-form-item prop="UserName" label="用户名">
+                    <el-input v-model="form.UserName" name="UserName"></el-input>
+                </el-form-item>
+                <el-form-item prop="PasswordHash" label="密码">
+                    <el-input v-model="form.PasswordHash" name="PassWordHash"></el-input>
+                </el-form-item>
+                <el-form-item>
+                    <el-button @@click="onSubmit" style="width:100%"  type="primary">登录</el-button> 
+                </el-form-item>
+                <el-form-item>
+                    <el-button @@click="onRegister" style="width:100%">注册</el-button>
+                </el-form-item>
+                <el-form-item>
+                    <el-button @@click="onReset" style="width:100%">重置</el-button>
+                </el-form-item>
+            </el-form>
+
+        </el-card>
+    </div>
+</body>
+<script>
+    new Vue({
+        el: "#app",
+        data: function () {
+
+            var   chechName=(rule, value, callback) => {
+                 if (!value) {
+                    return callback(new Error('用户名不能为空'));
+                }
+                callback();
+            }
+            var chechPassWord = (rule, value, callback) => {
+                if (!value) {
+                    return callback(new Error('密码不能为空'));
+                }
+                callback();
+            }
+
+
+            return {
+                form: {
+                    UserName: '',
+                    PasswordHash: ''
+                },
+                rules: {
+                    UserName: [{ validator: chechName, triger: 'blur' }],
+                    PasswordHash: [{ validator: chechPassWord, triger: 'blur' }]
+                }
+            }
+        },
+        methods: { 
+            onSubmit: function () {
+                this.$refs['form'].validate((valid) => {
+                    if (valid) {
+                        axios.post(
+                            "Login",
+                            JSON.stringify(this.form), { headers: { "Content-Type": "application/json" } })
+                            .then((message) => {
+                                ShowSuccess( message);
+                            })
+                            .catch((error) => {
+                                ShowError(error.response.data);
+                            });
+                    } else {
+                        console.log('error submit!!');
+                        return false;
+                    }
+
+                });
+            },
+            onRegister: function () {
+                window.location.href = 'Register';      
+            },
+            onReset() {
+                this.$refs['form'].resetFields();
+            }
+        }
+    });
+
+</script>
+ 

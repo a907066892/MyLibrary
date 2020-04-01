@@ -1,0 +1,16 @@
+﻿@model IEnumerable<NetCoreData.Model.User>
+@{
+    ViewData["Title"] = "UserList";
+}
+
+<h1>UserList</h1>
+
+<table>
+   <thead>
+       <tr>
+           <th> @Html.DisplayNameFor(model => model.Id)</th>
+           <th> @Html.DisplayNameFor(model => model.UserName)</th>
+           <th> @Html.DisplayNameFor(model => model.PasswordHash)</th>
+       </tr>
+   </thead>
+</table>

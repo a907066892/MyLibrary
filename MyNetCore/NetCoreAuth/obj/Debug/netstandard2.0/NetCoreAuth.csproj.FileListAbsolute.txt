@@ -1,0 +1,8 @@
+D:\MyLibrary\MyNetCore\NetCoreAuth\bin\Debug\netstandard2.0\NetCoreAuth.deps.json
+D:\MyLibrary\MyNetCore\NetCoreAuth\bin\Debug\netstandard2.0\NetCoreAuth.dll
+D:\MyLibrary\MyNetCore\NetCoreAuth\obj\Debug\netstandard2.0\NetCoreAuth.csprojAssemblyReference.cache
+D:\MyLibrary\MyNetCore\NetCoreAuth\obj\Debug\netstandard2.0\NetCoreAuth.AssemblyInfoInputs.cache
+D:\MyLibrary\MyNetCore\NetCoreAuth\obj\Debug\netstandard2.0\NetCoreAuth.AssemblyInfo.cs
+D:\MyLibrary\MyNetCore\NetCoreAuth\bin\Debug\netstandard2.0\NetCoreAuth.pdb
+D:\MyLibrary\MyNetCore\NetCoreAuth\obj\Debug\netstandard2.0\NetCoreAuth.dll
+D:\MyLibrary\MyNetCore\NetCoreAuth\obj\Debug\netstandard2.0\NetCoreAuth.pdb

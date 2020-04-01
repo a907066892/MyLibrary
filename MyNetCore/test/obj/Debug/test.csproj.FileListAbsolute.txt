@@ -1,0 +1,5 @@
+D:\MyLibrary\MyNetCore\test\bin\Debug\test.dll
+D:\MyLibrary\MyNetCore\test\bin\Debug\test.pdb
+D:\MyLibrary\MyNetCore\test\obj\Debug\test.csprojAssemblyReference.cache
+D:\MyLibrary\MyNetCore\test\obj\Debug\test.dll
+D:\MyLibrary\MyNetCore\test\obj\Debug\test.pdb
