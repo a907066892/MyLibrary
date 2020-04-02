@@ -9,6 +9,8 @@ namespace NetCoreData
         public NetCoreDbContext(DbContextOptions<NetCoreDbContext> options) : base(options)
         {
         }
-         public DbSet<User> User { get; set; }
+        public DbSet<User> User { get; set; }
+
+        public DbSet<Menu> Menus { get; set; }
     }
 }

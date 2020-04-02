@@ -71,10 +71,10 @@
                             "Login",
                             JSON.stringify(this.form), { headers: { "Content-Type": "application/json" } })
                             .then((message) => {
-                                ShowSuccess( message);
+                                base.ShowSuccess( message);
                             })
                             .catch((error) => {
-                                ShowError(error.response.data);
+                                base.ShowError(error.response.data);
                             });
                     } else {
                         console.log('error submit!!');

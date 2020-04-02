@@ -89,7 +89,7 @@ namespace MyNetCore.Controllers
 
                 return RedirectToAction("Index", "Home");
             }
-            return ErrorView("账户密码错误");
+            return ErrorContent("账户密码错误");
         }
 
 
@@ -99,14 +99,17 @@ namespace MyNetCore.Controllers
         /// <param name="_user"></param>
         /// <returns></returns>
         [HttpPost]
-        public IActionResult Register([FromForm]User _user)
+        public IActionResult Register([FromBody]User _user)
         {
+            if (_user.CheckSelf())
+                return ErrorContent("账户名或密码为空");
+
             //验证是否存在
             User user = _content.User.ToList().Find(s => s.UserName == _user.UserName);
             if (user != null)
             {
                 // 已存在
-                return ErrorView("已存在");
+                return ErrorContent("已存在");
             }
 
             _content.Add(_user);

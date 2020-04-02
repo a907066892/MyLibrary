@@ -419,3 +419,6 @@ D:\MyLibrary\MyNetCore\MyNetCore\bin\Debug\netcoreapp3.1\System.Text.Json.dll
 D:\MyLibrary\MyNetCore\MyNetCore\obj\Debug\netcoreapp3.1\MyNetCore.MvcApplicationPartsAssemblyInfo.cs
 D:\MyLibrary\MyNetCore\MyNetCore\obj\Debug\netcoreapp3.1\MyNetCore.MvcApplicationPartsAssemblyInfo.cache
 D:\MyLibrary\MyNetCore\MyNetCore\obj\Debug\netcoreapp3.1\Razor\Views\Auth\Register.cshtml.g.cs
+D:\MyLibrary\MyNetCore\MyNetCore\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+D:\MyLibrary\MyNetCore\MyNetCore\obj\Debug\netcoreapp3.1\Razor\Views\Home\Header.cshtml.g.cs
+D:\MyLibrary\MyNetCore\MyNetCore\obj\Debug\netcoreapp3.1\Razor\Views\Home\Menu.cshtml.g.cs

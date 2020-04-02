@@ -19,7 +19,7 @@ namespace MyNetCore.Controllers
         {
             _content = content;
         }
-        public IActionResult ErrorView(string ErrorMes, int StatusCode = 500)
+        public IActionResult ErrorContent(string ErrorMes, int StatusCode = 500)
         {
             ContentResult result = new ContentResult();
             result.Content=ErrorMes;

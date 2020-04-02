@@ -25,5 +25,17 @@ namespace NewNetCore.Controllers
         {
             return View();
         }
+
+        public IActionResult Header() 
+        {
+
+            return PartialView();
+        }
+
+        public IActionResult Menu()
+        {
+
+            return PartialView();
+        }
     }
 }

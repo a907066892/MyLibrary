@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewData["Title"] = "_Layout";
+    Layout = "~/Views/Shared/BaseView.cshtml";
+}
+<div id="app">
+    <el-container>
+        <!--顶部-->
+        <el-header>
+            @Html.Partial("/Home/Header")
+        </el-header>
+        <el-container>
+            <!--侧边-->
+            <el-aside style="width:200px">
+                @Html.Partial("/Home/Menu")
+            </el-aside>
+
+            <!--主要-->
+            <el-main>
+                @RenderBody();
+            </el-main>
+        </el-container>
+        <!--底部-->
+        <el-footer>
+
+        </el-footer>
+    </el-container>
+</div>
+<script>
+    var vue = new Vue({
+        el: "#app"
+    })
+</script>

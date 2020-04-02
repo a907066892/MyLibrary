@@ -1,6 +1,6 @@
 ﻿
 function ShowMessage(message, type) {
-    this.$message({ message: message, type: type });
+    base.$message({ message: message, type: type });
 }
 
 var base = new Vue({
